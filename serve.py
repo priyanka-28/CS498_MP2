@@ -25,7 +25,7 @@ def handle_request():
     elif request.method == 'GET':
         # Handle GET request to return the private IP address
         private_ip = socket.gethostbyname(socket.gethostname())
-        return jsonify({"private_ip": private_ip}), 200
+        return str(private_ip)
 
 if __name__ == "__main__":
     # Run the Flask app on port 5000
